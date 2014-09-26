@@ -3,7 +3,7 @@
 
 $mainblue:#bee2f3;
 $maindarkblue:#34adbe;
-
+$maindarkblue2:#5acbdb;
 @mixin iconurl1(){background-image:url(../images/icons.png?v=0.0.2);background-size:145px 300px;}
 @mixin btn($a,$b,$c){width:$a; height:$b;border-radius:5px;background-color: $mcl;display:block;
 	border-bottom: $c solid $mcd;color:#fff;}
@@ -25,6 +25,7 @@ $maindarkblue:#34adbe;
 
 .header{
 	width:100%; 
+
 }
 
 .header h1{
@@ -47,7 +48,6 @@ $maindarkblue:#34adbe;
 }
 
 
-
 .header .headerinfo .reading{
 	float: right;
 	font-size: 12px;
@@ -57,6 +57,16 @@ $maindarkblue:#34adbe;
 	margin:0 10px 0 3px;;
 	font-size: 14px;
 	color:#3db5c6; 
+}
+
+.button{
+	display:inline-block;
+	border-radius:5px;
+	line-height:35px;
+	background-color:$maindarkblue2;
+	color:#fff;
+	padding:0 20px;
+	border:1px solid $maindarkblue;
 }
 
 /*内容框*/
@@ -74,8 +84,14 @@ $maindarkblue:#34adbe;
 		border: 1px solid $mainblue;
 		border-top:none;
 		width:100%;
-		padding:10px;
+		padding:0px 10px 10px 10px;
 		box-sizing:border-box;
+		position:relative;
+		.title{
+			@include bb(100%,auto);
+			line-height: 25px;
+			font-size: 14px;
+		}
 		.adress{
 			padding: 0px 0px 0px 20px;
 			color: #37bacc;
@@ -98,17 +114,46 @@ $maindarkblue:#34adbe;
 			background-repeat: no-repeat;
 			background-position: 0px center;
 		}
+		.button{
+			@include bb(50%,auto);
+			text-align: center;
+			margin: 0 auto;
+		}
+		.baomingstatus{
+			@include bb(50px,50px);
+			position:absolute;
+			bottom:0px;
+			right: 0px;
+			overflow: hidden;
+			border-bottom-right-radius:5px;
+			.text{
+				@include bb(50px,20px);
+				text-align: center;
+				line-height: 20px;
+				-webkit-transform: translate3d(9px,21px,0px) rotate(-45deg);
+				color: #fff;
+				position:absolute;
+				top: 0px;
+				left: 0px;
+				text-shadow: 0 0 4px rgba(0,0,0,0.3);
+				font-weight:bold;
+			}
+			.sanjiao{
+				@include bb(inherit,inherit);
+			}
+		}
+
 	}
+
 }
 
 
 
 
-.maincontent .rule{
-	word-break:break-all;
-	word-wrap:break-word;
+.rule{
+	@include bb(100%,auto);
+	box-sizing:border-box;
 	padding: 0px 10px;
-	font-size: 14px;
 	margin-bottom: 10px;
 }
 
@@ -243,7 +288,7 @@ $maindarkblue:#34adbe;
 	left:0px; 
 	bottom:0px;
 	height: 49px;
-	background-color:#5acbdb; 
+	background-color:$maindarkblue2; 
 	text-align: center;
 
 
@@ -288,6 +333,26 @@ $maindarkblue:#34adbe;
 	.mainbtn{
 		-webkit-transition: 0.3s ease-out;
 	}
+	.leftlink,.centerlink,.rightlink{
+		@include bb(33%,inherit);
+		padding-top:5px;
+		box-sizing:border-box;
+		.icon{
+			@include bb(25px,25px);
+			margin: 0 auto;
+			svg{fill:#fff;}
+		}
+		.text{
+			@include bb(100%,19px);
+			line-height: 19px;
+			font-size: 12px;
+			color: #fff;
+		}
+	}
+	.leftlink{float: left;}
+	.centerlink{width:33%; margin:0 auto;}
+	.rightlink{float: right;}
+	.current{background-color:$maindarkblue;}
 }
 .sendinfobox{
 	@include bb(100%,auto);
@@ -314,7 +379,16 @@ $maindarkblue:#34adbe;
 }
 
 
-
+.bottom50{@include bb(100%,50px);}
+.bottom40{@include bb(100%,40px);}
+.topbar{
+	@include bb(100%,40px);
+	background-color:$maindarkblue2;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index: 999;
+}
 
 // //list
 // body{background-color:#fff;}
