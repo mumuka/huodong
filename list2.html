@@ -1,99 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>地对地导弹</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="styles/css/style.css?v=0.0.3">
+    <link rel="stylesheet" href="styles/css/style.css?v=0.0.4">
     <script src="http://dev.comeoncloud.net/test/lib/weixin/weixinshare.min.js"></script>
     <script data-main="src/list" src="http://dev.comeoncloud.net/test/lib/requirejs/require.js"></script>
     <script>
     WeixinShare.init({
         imgUrl:"http://dev.comeoncloud.net/test/1409/jisuanqi/styles/images/jsq.jpg",
-        descContent:"工伤级别计算器",
-        shareTitle:"工伤级别计算器",
+        descContent:"活动列表",
+        shareTitle:"活动列表页",
     })
     </script>
 </head>
 <body>
 <section class="box">
-
-    <div class="topbar"></div>
-    <div class="bottom40"></div>
-    <div class="maincontext"> 
-        <img src="images/banner.png">
-        <div class="maincontent">
-            <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
-            <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
-            <span class="time">2014年9月15日  00:00 </span>
-            <!-- <a href="#" class="button">我要报名</a> -->
-            <span class="baomingstatus ">
-                <span class="text">进行中</span>
-                <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
-                    <polygon points="100,100 0.2,100 100,0.2" />
-                </svg>
-            </span>
-        </div>
+    <div class="categorybox">
+        <div class="title">活动分类</div>
+        <ul class="categorylist">
+            <li class="list current"><a href="#">全部</a></li>
+            <li class="list"><a href="#">分类名称</a></li>
+            <li class="list"><a href="#">分类名称</a></li>
+            <li class="list"><a href="#">分类名称</a></li>
+            <li class="list"><a href="#">分类名称</a></li>
+            <li class="list"><a href="#">分类名称</a></li>
+            <li class="list"><a href="#">分类名称</a></li>
+            <li class="list"><a href="#">分类名称</a></li>
+        </ul>
     </div>
-    <div class="maincontext"> 
-        <img src="images/banner.png">
-        <div class="maincontent">
-            <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
-            <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
-            <span class="time">2014年9月15日  00:00 </span>
-            <span class="baomingstatus ">
-                <span class="text">进行中</span>
-                <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
-                    <polygon points="100,100 0.2,100 100,0.2" />
-                </svg>
-            </span>
-        </div>
-    </div>
-    <div class="maincontext"> 
-        <img src="images/banner.png">
-        <div class="maincontent">
-            <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
-            <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
-            <span class="time">2014年9月15日  00:00 </span>
-            <span class="baomingstatus ">
-                <span class="text">进行中</span>
-                <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
-                    <polygon points="100,100 0.2,100 100,0.2" />
-                </svg>
-            </span>
-        </div>
-    </div>
-    <div class="maincontext"> 
-        <img src="images/banner.png">
-        <div class="maincontent">
-            <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
-            <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
-            <span class="time">2014年9月15日  00:00 </span>
-            <span class="baomingstatus ">
-                <span class="text">进行中</span>
-                <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
-                    <polygon points="100,100 0.2,100 100,0.2" />
-                </svg>
-            </span>
-        </div>
+    <div class="topbar">
+        <span class="category" id="categorybtn">
+            <svg viewBox="0 0 128 128" >
+                <path fill-rule="evenodd" clip-rule="evenodd"  d="M120.4,11.3H7.6c-4.2,0-7.6,3.4-7.6,7.6v3c0,4.2,3.4,7.6,7.6,7.6
+                        h112.8c4.2,0,7.6-3.4,7.6-7.6v-3C128,14.7,124.6,11.3,120.4,11.3z M120.4,54H7.6C3.4,54,0,57.4,0,61.6v3c0,4.2,3.4,7.6,7.6,7.6
+                        h112.8c4.2,0,7.6-3.4,7.6-7.6v-3C128,57.4,124.6,54,120.4,54z M120.4,96.6H7.6c-4.2,0-7.6,3.4-7.6,7.6v3c0,4.2,3.4,7.6,7.6,7.6
+                        h112.8c4.2,0,7.6-3.4,7.6-7.6v-3C128,100,124.6,96.6,120.4,96.6z"/>
+            </svg>
+        </span>
+        <input class="search" type="text">
+        <span class="searchbtn">
+            <svg viewBox="0 0 128 128" >
+                <path d="M52 104c11.472 0 22.071-3.723 30.67-10.016l31.673 31.673c3.124 3.124 8.189 3.124 11.314 0s3.124-8.189 0-11.314l-31.673-31.673c6.293-8.599 10.016-19.198 10.016-30.67 0-28.719-23.281-52-52-52s-52 23.281-52 52 23.281 52 52 52zM52 8c24.3 0 44 19.7 44 44s-19.7 44-44 44-44-19.7-44-44 19.7-44 44-44z" ></path>
+            </svg>
+        </span>
     </div>
 
-    <div class="maincontext"> 
-        <img src="images/banner.png">
-        <div class="maincontent">
-            <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
-            <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
-            <span class="time">2014年9月15日  00:00 </span>
-            <span class="baomingstatus ">
-                <span class="text">已结束</span>
-                <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#ccc">
-                    <polygon points="100,100 0.2,100 100,0.2" />
-                </svg>
-            </span>
+    <div class="listbox">
+        <div class="bottom40"></div>
+        <div class="maincontext"> 
+            <img src="images/banner.png">
+            <div class="maincontent">
+                <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
+                <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
+                <span class="time">2014年9月15日  00:00 </span>
+                <!-- <a href="#" class="button">我要报名</a> -->
+                <span class="baomingstatus ">
+                    <span class="text">进行中</span>
+                    <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
+                        <polygon points="100,100 0.2,100 100,0.2" />
+                    </svg>
+                </span>
+            </div>
         </div>
+
+        <div class="maincontext"> 
+            <img src="images/banner.png">
+            <div class="maincontent">
+                <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
+                <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
+                <span class="time">2014年9月15日  00:00 </span>
+                <span class="baomingstatus ">
+                    <span class="text">进行中</span>
+                    <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
+                        <polygon points="100,100 0.2,100 100,0.2" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="maincontext"> 
+            <img src="images/banner.png">
+            <div class="maincontent">
+                <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
+                <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
+                <span class="time">2014年9月15日  00:00 </span>
+                <span class="baomingstatus ">
+                    <span class="text">进行中</span>
+                    <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
+                        <polygon points="100,100 0.2,100 100,0.2" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="maincontext"> 
+            <img src="images/banner.png">
+            <div class="maincontent">
+                <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
+                <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
+                <span class="time">2014年9月15日  00:00 </span>
+                <span class="baomingstatus ">
+                    <span class="text">进行中</span>
+                    <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#5ddc73">
+                        <polygon points="100,100 0.2,100 100,0.2" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="maincontext"> 
+            <img src="images/banner.png">
+            <div class="maincontent">
+                <span class="title">周末完全免费的外教英语互动课？你准备好了吗？</span>
+                <span class="adress">上海长宁区安化路492号"德必易园"A座8楼萃德厅1506室（凯旋路)</span>
+                <span class="time">2014年9月15日  00:00 </span>
+                <span class="baomingstatus ">
+                    <span class="text">已结束</span>
+                    <svg class="sanjiao" version="1.1" viewBox="0 0 100 100" fill="#ccc">
+                        <polygon points="100,100 0.2,100 100,0.2" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <span class="button laodmoer">加载更多</span>
+        <div class="bottom50"></div>
     </div>
-    
-    <div class="bottom50"></div>
+
+
     <div class="submit">
         <a href="#" class="leftlink">
             <span class="icon">
