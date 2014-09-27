@@ -14,12 +14,15 @@ requirejs(["jquery"],function($){
 			$(".topbar").css({"-webkit-transform":"translate3d(45%,0,0)","-webkit-transition":"0.5s ease-out"})
 			$(".listbox").css({"-webkit-transform":"translate3d(45%,0,0)","-webkit-transition":"0.5s ease-out"})
 			$(".submit").css({"-webkit-transform":"translate3d(45%,0,0)","-webkit-transition":"0.5s ease-out"})
+			$("#screentouch").css({"-webkit-transform":"translate3d(45%,0,0)","display":"block"})
 			this.categorybtnclick=1;
 		},
 		hide:function(){
 			$(".topbar").css({"-webkit-transform":"translate3d(0%,0,0)","-webkit-transition":"0.5s ease-out"})
 			$(".listbox").css({"-webkit-transform":"translate3d(0%,0,0)","-webkit-transition":"0.5s ease-out"})
 			$(".submit").css({"-webkit-transform":"translate3d(0%,0,0)","-webkit-transition":"0.5s ease-out"})
+			$("#screentouch").css({"display":"none"})
+
 			this.categorybtnclick=0;			
 		},
 		run:function(){
@@ -31,12 +34,19 @@ requirejs(["jquery"],function($){
 		},
 		main:function(){
 			var _this=this;
-			$("#categorybtn").bind("click",function(){
-				console.log(1)
+			$("#categorybtn").bind("click",function(e){
 				_this.run()
 			})
-			$("#categorybtn").bind("touchend",function(){
-				console.log(2)
+			$("#categorybtn").bind("touchend",function(e){
+				e.preventDefault()
+				$("#categorybtn").unbind("click")
+				_this.run()
+			})
+			$("#screentouch").bind("click",function(e){
+				_this.run()
+			})
+			$("#screentouch").bind("touchstart",function(e){
+				e.preventDefault()
 				$("#categorybtn").unbind("click")
 				_this.run()
 			})

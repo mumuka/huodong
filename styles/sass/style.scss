@@ -77,7 +77,7 @@ $maindarkblue2:#5acbdb;
 /*内容框*/
 .maincontext{
 	box-sizing:border-box;
-	width: 100%;
+	@include bb(100%,auto);
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	box-shadow:0 0 5px rgba(0,0,0,0.2);
@@ -393,7 +393,7 @@ $maindarkblue2:#5acbdb;
 	position:fixed;
 	top:0px;
 	left:0px;
-	z-index: 999;
+	z-index: 2;
 	box-sizing:border-box;
 	padding:0 40px 0 50px;
 	.category{
@@ -477,8 +477,45 @@ $maindarkblue2:#5acbdb;
 		.list:active{background-color:#292929;}
 	}
 }
+#screentouch{
+	position:fixed;
+	@include bb(100%,100%);
+	display:none;
+	// -webkit-transform:translate3d(45%,0,0);
+	z-index: 3;
+}
 
 
+.mycenterbox{
+	border:none;
+	box-shadow:none;
+	padding-top:10px;
+	.maincontent{
+		border:none;
+	}
+	.RQcode{
+		@include bb(150px,150px);
+		margin:0px auto;
+		img{
+			@include bb(100%,auto);
+		}
+	}
+	h2{
+		width:100%;
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.note{padding:10px;}
+	.personalinfo{
+		width: 100%;
+		text-align: center;
+		font-size: 16px;
+		line-height: 25px;
+		margin: 5px 0;
+	}
+}
 // //list
 // body{background-color:#fff;}
 // .websiteiframebox{@include bb(100%,100%);position:absolute; top:0px; left:0px;}
@@ -717,4 +754,7 @@ $maindarkblue2:#5acbdb;
 	.box{width:360px;}
 }
 
+@media all and (min-width:361px){
+	.box{width:100%;}
+}
 
